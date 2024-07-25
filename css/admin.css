@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar .logo{   
+        width: 100%; 
+        max-width: 250px; 
+        height: auto;   
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+}
+
+.main-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content section {
+    display: none;
+    margin-bottom: 40px;
+}
+
+.main-content button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-content button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.staff-list {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.staff-list th, .staff-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.staff-list th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+

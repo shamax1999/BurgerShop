@@ -1,0 +1,100 @@
+.active,
+.side-nav-item:hover,
+.nav-item-type:hover {
+    border-color: #9226ED;
+}
+
+.side-nav-item {
+    cursor: pointer;
+    border: 3px solid #FBFFFF;
+    border-radius: 12px;
+}
+
+.nav-item-type {
+    cursor: pointer;
+    border: 3px solid #FBFFFF;
+    border-radius: 12px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container-fluid {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#card-area {
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#order-area {
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.accordion-button:not(.collapsed)::after {
+    order: -1;
+    margin-left: 0;
+    margin-right: 0.5em;
+    background-image: url("../img/home/expand-up.png");
+}
+
+.accordion-button.collapsed::after {
+    order: -1;
+    margin-left: 0;
+    margin-right: 0.5em;
+    background-image: url("../img/home/expand-b.png");
+}
+
+.accordion-body .form-control {
+    border: 2px solid #9226ED;
+}
+
+#btn-discount,
+#icon-reset,
+#icon-clock {
+    cursor: pointer;
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    #item-types {
+        font-size: 13px !important;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    #item-types {
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width:576px) {
+    #item-types {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width:484px) {
+    #item-types {
+        font-size: 8px !important;
+    }
+
+    #item-types div {
+        margin-left: .5rem !important;
+        margin-right: .5rem !important;
+    }
+}
+
+@media (max-width:576px) {
+    #item-types div {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
