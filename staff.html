@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Staff Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/item.css">
@@ -15,20 +15,17 @@
         </a>
         <ul>
             <li><a href="#home" onclick="showSection('home')">HOME</a></li>
-            <li><a href="#staff" onclick="showSection('staff')">STAFF</a></li>
             <li><a href="#customers" onclick="showSection('customers')">CUSTOMERS</a></li>
             <li><a href="#orders" onclick="showSection('orders')">ORDERS</a></li>
             <li><a href="#items" onclick="showSection('items')">ITEMS</a></li>
-            <li><a href="#reports" onclick="showSection('reports')">REPORTS</a></li>
             <button class="logout-btn" onclick="logout()">Logout</button>
+
         </ul>
     </div>
     <div class="main-content">
-        
-        <h1>Admin Dashboard</h1>
+        <h1>Staff Dashboard</h1>
         
         <section id="home" class="content-section">
-            
             <h2>Items</h2>
             <div class="filter-buttons">
                 <button class="filter-btn active" data-category="ALL">ALL</button>
@@ -64,37 +61,7 @@
         </section>
         
         
-        
-        
-        <section id="staff" class="content-section">
-            
-            <h2>Staff Management</h2>
-            <div class="staff-buttons">
-                <button onclick="showModalContent('addStaff')">
-                    <i class="fa fa-user-plus"></i>
-                    <span>ADD STAFF MEMBER</span>
-                </button>
-                <button onclick="showModalContent('updateStaff')">
-                    <i class="fa fa-user"></i>
-                    <span>UPDATE STAFF MEMBER</span>
-                </button>
-                <button onclick="showModalContent('deleteStaff')">
-                    <i class="fa fa-trash"></i>
-                    <span>DELETE STAFF MEMBER</span>
-                </button>
-                <button onclick="showModalContent('viewStaff')">
-                    <i class="fa fa-user"></i>
-                    <span>VIEW STAFF</span>
-                </button>
-            </div>
-            <div id="staffModalContent" class="modal-content"  >
-                
-            </div>
-        </section>
-
-
         <section id="customers" class="content-section">
-            
             <h2>Customer Management</h2>
             <div class="customer-buttons">
                 <button onclick="showModalContent('addCustomer')">
@@ -121,7 +88,6 @@
 
         
         <section id="orders" class="content-section">
-            
             <h2>Order Details</h2>
             <input type="text" id="search-bar" placeholder="Enter Customer ID to search">
               <button id="search-btn">Search</button>
@@ -154,7 +120,6 @@
         </div>
         
         <section id="items" class="content-section">
-            
             <h2>Store Management</h2>
             
             <div class="filter-buttons">
@@ -228,86 +193,12 @@
             </div>
         </div>
         </section>
-        
-        <section id="reports" class="content-section">
-          
-            <h2>Report Details</h2>
-            <div class="report-buttons">
-                <button id="generate-monthly-report-btn">Generate Monthly Sales Report</button>
-                <button id="generate-annual-report-btn">Generate Annual Sales Report</button>
-                <button id="view-top-customers-btn">View Top Customers of the Month</button>
-                <button id="generate-food-items-count-btn">Generate Food Items Count Report</button>
-            </div>
-            <div id="report-output">
-                
-            </div>
-        </section>
-        
-        
-        
 
         
     </div>
 
-    
-    <div id="addStaff" class="modal-template" style="display:none;">
-        <h2>Add Staff Member</h2>
-        <form id="addStaffForm">
-            <label for="staffId">Staff Member ID:</label>
-            <input type="text" id="staffId" name="staffId" required>
-            <label for="mobileNumber">Enter Mobile Number:</label>
-            <input type="text" id="mobileNumber" name="mobileNumber" required>
-            <label for="staffName">Staff Member Name:</label>
-            <input type="text" id="staffName" name="staffName" required>
-            <label for="staffAddress">Staff Member Address:</label>
-            <input type="text" id="staffAddress" name="staffAddress" required>
-            <label for="staffNIC">Staff Member NIC:</label>
-            <input type="text" id="staffNIC" name="staffNIC" required>
-            <button type="button" onclick="addStaffMember()">Add</button>
-        </form>
-        <button class="back-button" onclick="showStaffButtons()">Back</button>
-    </div>
 
-    <div id="updateStaff" class="modal-template" style="display:none;">
-        <h2>Update Staff Member</h2>
-        <form id="updateStaffForm">
-            <label for="updateStaffId">Staff Member ID:</label>
-            <input type="text" id="updateStaffId" name="updateStaffId" required>
-            <button type="button" onclick="fetchAndShowStaff('update')">Fetch Details</button>
-            <div id="updateStaffDetails"></div>
-            <button type="button" onclick="updateStaffMember()">Update</button>
-        </form>
-        <button class="back-button" onclick="showStaffButtons()">Back</button>
-    </div>
 
-    <div id="deleteStaff" class="modal-template" style="display:none;">
-        <h2>Delete Staff Member</h2>
-        <form id="deleteStaffForm">
-            <label for="deleteStaffId">Staff Member ID:</label>
-            <input type="text" id="deleteStaffId" name="deleteStaffId" required>
-            <button type="button" onclick="deleteStaffMember()">Delete</button>
-        </form>
-        <button class="back-button" onclick="showStaffButtons()">Back</button>
-    </div>
-
-    <div id="viewStaff" class="modal-template" style="display:none;">
-        <h2>View Staff</h2>
-        <table id="staffList" class="staff-list">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Mobile</th>
-                    <th>Address</th>
-                    <th>NIC</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-        <button class="back-button" onclick="showStaffButtons()">Back</button>
-    </div>
 
     <div id="addCustomer" class="modal-template" style="display:none;">
         <h2>Add Customer</h2>
