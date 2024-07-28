@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const authenticatedUser = localStorage.getItem('authenticatedUser');
+  const currentPage = window.location.pathname.split('/').pop().split('.').shift();
+
+  if (authenticatedUser !== currentPage) {
+      // Redirect to login page if user is not authenticated or accessing a different page
+      window.location.href = 'login.html';
+  }
+
+  // Add any additional page-specific logic here
+});
+
+
+
+
 
 let staffDatabase = [
   {
@@ -40,13 +55,18 @@ let customerDatabase = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-  showSection('home'); // Show the 'home' section by default
+  showSection('home'); 
 });
 
 
 function logout() {
+  
+  localStorage.removeItem('authenticatedUser');
+  
+ 
   window.location.href = 'login.html'; 
 }
+
 
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.content-section');

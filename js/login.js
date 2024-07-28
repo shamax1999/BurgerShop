@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const invalidCredentialsMsg = document.getElementById('msg-invalid-credentials');
     const loginButton = document.getElementById('btn-login');
 
-    
     const mockCredentials = {
         admin: {
             username: 'admin',
@@ -36,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             mockCredentials[selectedCategory].password === password) {
             invalidCredentialsMsg.style.display = 'none';
             
+            // Store authentication status in local storage
+            localStorage.setItem('authenticatedUser', selectedCategory);
             window.location.href = selectedCategory + '.html'; 
         } else {
             invalidCredentialsMsg.textContent = 'Username or password is incorrect!';
