@@ -39,3 +39,35 @@ sr.reveal(`.home-text, .home-img,
             .contact-box`, {
     interval: 200
 })
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleButton = document.getElementById('toggle-contact-form');
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        
+        toggleButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            contactForm.classList.toggle('active'); // Toggle the 'active' class
+        });
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Simulate a successful form submission
+            setTimeout(() => {
+                formMessage.textContent = 'Message sent successfully!';
+                formMessage.classList.remove('error');
+                
+                // Clear form fields (optional)
+                contactForm.reset();
+            }, 500); // Simulate a delay
+        });
+    });
+
+
+

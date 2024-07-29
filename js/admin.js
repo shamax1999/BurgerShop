@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
 let staffDatabase = [
   {
     username: "staff",
@@ -910,7 +913,7 @@ const items = [
                 <h4>${item.itemName}</h4>
                 <p>Price: Rs. ${item.price.toFixed(2)}</p>
                 ${item.discount > 0 ? `<p>Discount: ${item.discount.toFixed(2)}%</p>` : ''}
-                <button onclick="addToCart('${item.itemCode}')">Add to Cart</button>
+                <button onclick="addToCart('${item.itemCode}')" >Add to Cart</button>
                 ${isExpired ? `<p class="expired-warning">This item has expired!</p>` : ''}
             `;
             itemContainer.appendChild(itemElement);
@@ -1092,12 +1095,190 @@ const items = [
         updateOrdersSection(searchValue);
     });
     document.getElementById('clear-search-btn').addEventListener('click', clearSearch);
+  
+
+    
+// Function to hide all report sections
+function hideAllReports() {
+  document.querySelectorAll('.report-section').forEach(section => {
+      section.style.display = 'none';
+  });
+}
+
+// Function to display a specific report section
+function showReportSection(sectionId) {
+  hideAllReports();
+  document.getElementById(sectionId).style.display = 'block';
+}
+
+// Function to generate Monthly Sales Report
+function generateMonthlySalesReport() {
+  const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+  const currentYear = new Date().getFullYear();
+  let totalMonthlyPrice = 0;
+  let totalQuantity = 0;
+
+  const monthlyOrders = orders.filter(order => {
+      const orderDate = new Date(order.timestamp);
+      return orderDate.getFullYear() === currentYear && orderDate.toLocaleString('default', { month: 'long' }) === currentMonth;
+  });
+
+  monthlyOrders.forEach(order => {
+      totalMonthlyPrice += order.finalTotalPrice;
+      order.items.forEach(item => {
+          totalQuantity += item.quantity;
+      });
+  });
+
+  const tableBody = document.querySelector('#monthly-report-table tbody');
+  tableBody.innerHTML = `
+      <tr>
+          <td>${currentMonth}</td>
+          <td>Rs. ${totalMonthlyPrice.toFixed(2)}</td>
+          <td>${totalQuantity}</td>
+      </tr>
+  `;
+
+  showReportSection('monthly-report');
+}
+
+// Function to generate Annual Sales Report
+function generateAnnualSalesReport() {
+  const currentYear = new Date().getFullYear();
+  let totalAnnualPrice = 0;
+
+  const annualOrders = orders.filter(order => {
+      const orderDate = new Date(order.timestamp);
+      return orderDate.getFullYear() === currentYear;
+  });
+
+  annualOrders.forEach(order => {
+      totalAnnualPrice += order.finalTotalPrice;
+  });
+
+  const tableBody = document.querySelector('#annual-report-table tbody');
+  tableBody.innerHTML = `
+      <tr>
+          <td>${currentYear}</td>
+          <td>Rs. ${totalAnnualPrice.toFixed(2)}</td>
+      </tr>
+  `;
+
+  showReportSection('annual-report');
+}
+
+// Function to view Top Customers
+function viewTopCustomers() {
+  const currentMonth = new Date().toLocaleString('default', { month: 'long' });
+  const currentYear = new Date().getFullYear();
+
+  const monthlyOrders = orders.filter(order => {
+      const orderDate = new Date(order.timestamp);
+      return orderDate.getFullYear() === currentYear && orderDate.toLocaleString('default', { month: 'long' }) === currentMonth;
+  });
+
+  const customerSpending = monthlyOrders.reduce((acc, order) => {
+      if (!acc[order.customerCode]) {
+          acc[order.customerCode] = 0;
+      }
+      acc[order.customerCode] += order.finalTotalPrice;
+      return acc;
+  }, {});
+
+  const customerNames = {};
+  customerDatabase.forEach(customer => {
+      customerNames[customer.customerId] = customer.customerName;
+  });
+
+  const topCustomers = Object.keys(customerSpending).map(id => ({
+      customerId: id,
+      customerName: customerNames[id],
+      totalSpent: customerSpending[id]
+  })).sort((a, b) => b.totalSpent - a.totalSpent);
+
+  const tableBody = document.querySelector('#top-customers-table tbody');
+  tableBody.innerHTML = topCustomers.map(customer => `
+      <tr>
+          <td>${customer.customerId}</td>
+          <td>${customer.customerName}</td>
+          <td>Rs. ${customer.totalSpent.toFixed(2)}</td>
+      </tr>
+  `).join('');
+
+  showReportSection('top-customers-report');
+}
+
+// Function to generate Food Items Count Report
+function generateFoodItemsCountReport() {
+  const itemCount = orders.reduce((acc, order) => {
+      order.items.forEach(item => {
+          acc[item.name] = (acc[item.name] || 0) + item.quantity;
+      });
+      return acc;
+  }, {});
+
+  const itemCountArray = Object.keys(itemCount).map(itemName => ({
+      name: itemName,
+      totalSold: itemCount[itemName]
+  }));
+
+  itemCountArray.sort((a, b) => b.totalSold - a.totalSold);
+
+  const tableBody = document.querySelector('#food-items-table tbody');
+  tableBody.innerHTML = itemCountArray.map(item => `
+      <tr>
+          <td>${item.name}</td>
+          <td>${item.totalSold}</td>
+      </tr>
+  `).join('');
+
+  showReportSection('food-items-report');
+}
+
+// Event listeners for buttons
+document.getElementById('monthly-report-btn').addEventListener('click', generateMonthlySalesReport);
+document.getElementById('annual-report-btn').addEventListener('click', generateAnnualSalesReport);
+document.getElementById('top-customers-btn').addEventListener('click', viewTopCustomers);
+document.getElementById('food-items-report-btn').addEventListener('click', generateFoodItemsCountReport);
+
+
+
 
     
     populateCustomerDropdown();
     displayItems();
     displayCart();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cart = document.querySelector('.cart');
+  const toggleButton = document.getElementById('cart-toggle');
+
+  // Toggle cart visibility
+  toggleButton.addEventListener('click', function () {
+      if (cart.style.display === 'none' || !cart.style.display) {
+          cart.style.display = 'flex'; // Show the cart
+      } else {
+          cart.style.display = 'none'; // Hide the cart
+      }
+  });
+});
+
+
+
 
 
 

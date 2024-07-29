@@ -12,7 +12,7 @@ a {
 }
 
 .color-bg-primary {
-    background-color: #9226ED !important;
+    background-color:  #ffa400 !important;
 }
 
 .color-bg-danger {
@@ -32,7 +32,7 @@ a {
 }
 
 .color-txt-primary {
-    color: #9226ED !important;
+    color:  #ffa400 !important;
 }
 
 .color-txt-black {
@@ -61,8 +61,8 @@ a {
 
 .form-control:focus {
     background-color: #F4E9FD;
-    border-color: rgba(146, 38, 237, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(146, 38, 237, 0.6);
+    border-color: #ffa400;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px  #ffa400;
     outline: 0 none;
 }
 
