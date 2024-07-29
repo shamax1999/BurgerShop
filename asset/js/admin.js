@@ -362,7 +362,7 @@ const items = [
       itemName: "Classic Burger (Large)",
       price: 750.0,
       discount: 0,
-      image: "./items/burgers/burger-1.png"
+      image: "./asset/img/items/burgers/burger-1.png"
     },
     {
       itemCode: "B1002",
@@ -370,7 +370,7 @@ const items = [
       itemName: "Classic Burger (Regular)",
       price: 1500.0,
       discount: 15,
-      image: "./items/burgers/burger-2.png"
+      image: "./asset/img/items/burgers/burger-2.png"
     },
     {
       itemCode: "B1003",
@@ -378,7 +378,7 @@ const items = [
       itemName: "Turkey Burger",
       price: 1600.0,
       discount: 0,
-      image: "./items/burgers/burger-3.png"
+      image: "./asset/img/items/burgers/burger-3.png"
     },
     {
       itemCode: "B1004",
@@ -386,7 +386,7 @@ const items = [
       itemName: "Chicken Burger (Large)",
       price: 1400.0,
       discount: 0,
-      image: "./items/burgers/burger-4.png"
+      image: "./asset/img/items/burgers/burger-4.png"
     },
     {
       itemCode: "B1005",
@@ -394,7 +394,7 @@ const items = [
       itemName: "Chicken Burger (Regular)",
       price: 800.0,
       discount: 20,
-      image: "./items/burgers/burger-5.png"
+      image: "./asset/img/items/burgers/burger-5.png"
     },
     {
       itemCode: "B1006",
@@ -402,7 +402,7 @@ const items = [
       itemName: "Cheese Burger (Large)",
       price: 1000.0,
       discount: 0,
-      image: "./items/burgers/burger-6.png"
+      image: "./asset/img/items/burgers/burger-6.png"
     },
     {
       itemCode: "B1007",
@@ -410,7 +410,7 @@ const items = [
       itemName: "Cheese Burger (Regular)",
       price: 600.0,
       discount: 0,
-      image: "./items/burgers/burger-7.png"
+      image: "./asset/img/items/burgers/burger-7.png"
     },
     {
       itemCode: "B1008",
@@ -418,7 +418,7 @@ const items = [
       itemName: "Bacon Burger",
       price: 650.0,
       discount: 15,
-      image: "./items/burgers/burger-8.png"
+      image: "./asset/img/items/burgers/burger-8.png"
     },
     {
       itemCode: "B1009",
@@ -426,7 +426,7 @@ const items = [
       itemName: "Shawarma Burger",
       price: 800.0,
       discount: 0,
-      image: "./items/burgers/burger-9.png"
+      image: "./asset/img/items/burgers/burger-9.png"
     },
     {
       itemCode: "B1010",
@@ -434,7 +434,7 @@ const items = [
       itemName: "Olive Burger",
       price: 1800.0,
       discount: 0,
-      image: "./items/burgers/burger-10.png"
+      image: "./asset/img/items/burgers/burger-10.png"
     },
     {
       itemCode: "B1012",
@@ -442,7 +442,7 @@ const items = [
       itemName: "Double-Cheese Burger",
       price: 1250.0,
       discount: 20,
-      image: "./items/burgers/burger-11.png"
+      image: "./asset/img/items/burgers/burger-11.png"
     },
     {
       itemCode: "B1013",
@@ -450,7 +450,7 @@ const items = [
       itemName: "Crispy Chicken Burger (Regular)",
       price: 1200.0,
       discount: 0,
-      image: "./items/burgers/burger-8.png"
+      image: "./asset/img/items/burgers/burger-8.png"
     },
     {
       itemCode: "B1014",
@@ -458,7 +458,7 @@ const items = [
       itemName: "Crispy Chicken Burger (Large)",
       price: 1600.0,
       discount: 10,
-      image: "./items/burgers/burger-6.png"
+      image: "./asset/img/items/burgers/burger-6.png"
     },
     {
       itemCode: "B1015",
@@ -466,7 +466,7 @@ const items = [
       itemName: "Paneer Burger",
       price: 900.0,
       discount: 0,
-      image: "./items/burgers/burger-5.png"
+      image: "./asset/img/items/burgers/burger-5.png"
     },
   
     // Submarines
@@ -476,7 +476,7 @@ const items = [
       itemName: "Crispy Chicken Submarine (Large)",
       price: 2000.0,
       discount: 0,
-      image: "./items/submarines/submarine-1.jpg"
+      image: "./asset/img/items/submarines/submarine-1.jpg"
     },
     {
       itemCode: "B1017",
@@ -484,7 +484,7 @@ const items = [
       itemName: "Crispy Chicken Submarine (Regular)",
       price: 1500.0,
       discount: 0,
-      image: "./items/submarines/submarine-2.jpg"
+      image: "./asset/img/items/submarines/submarine-2.jpg"
     },
     {
       itemCode: "B1018",
@@ -492,7 +492,7 @@ const items = [
       itemName: "Chicken Submarine (Large)",
       price: 1800.0,
       discount: 3,
-      image: "./items/submarines/submarine-3.jpg"
+      image: "./asset/img/items/submarines/submarine-3.jpg"
     },
     {
       itemCode: "B1019",
@@ -500,7 +500,7 @@ const items = [
       itemName: "Chicken Submarine (Regular)",
       price: 1400.0,
       discount: 0,
-      image: "./items/submarines/submarine-4.jpg"
+      image: "./asset/img/items/submarines/submarine-4.jpg"
     },
     {
       itemCode: "B1020",
@@ -508,7 +508,7 @@ const items = [
       itemName: "Grinder Submarine",
       price: 2300.0,
       discount: 0,
-      image: "./items/submarines/submarine-5.jpg"
+      image: "./asset/img/items/submarines/submarine-5.jpg"
     },
     {
       itemCode: "B1021",
@@ -516,7 +516,7 @@ const items = [
       itemName: "Cheese Submarine",
       price: 2200.0,
       discount: 0,
-      image: "./items/submarines/submarine-6.jpg"
+      image: "./asset/img/items/submarines/submarine-6.jpg"
     },
     {
       itemCode: "B1022",
@@ -524,7 +524,7 @@ const items = [
       itemName: "Double Cheese n Chicken Submarine",
       price: 1900.0,
       discount: 16,
-      image: "./items/submarines/submarine-7.jpg"
+      image: "./asset/img/items/submarines/submarine-7.jpg"
     },
     {
       itemCode: "B1023",
@@ -532,7 +532,7 @@ const items = [
       itemName: "Special Horgie Submarine",
       price: 2800.0,
       discount: 0,
-      image: "./items/submarines/submarine-8.jpg"
+      image: "./asset/img/items/submarines/submarine-8.jpg"
     },
     {
       itemCode: "B1024",
@@ -540,7 +540,7 @@ const items = [
       itemName: "MOS Special Submarine",
       price: 3000.0,
       discount: 0,
-      image: "./items/submarines/submarine-9.jpg"
+      image: "./asset/img/items/submarines/submarine-9.jpg"
     },
   
     // Fries
@@ -550,7 +550,7 @@ const items = [
       itemName: "Steak Fries (Large)",
       price: 1200.0,
       discount: 0,
-      image: "./items/fries/fries-1.jpg"
+      image: "./asset/img/items/fries/fries-1.jpg"
     },
     {
       itemCode: "B1026",
@@ -558,7 +558,7 @@ const items = [
       itemName: "Steak Fries (Medium)",
       price: 600.0,
       discount: 0,
-      image: "./items/fries/fries-1.jpg"
+      image: "./asset/img/items/fries/fries-1.jpg"
     },
     {
       itemCode: "B1027",
@@ -566,7 +566,7 @@ const items = [
       itemName: "French Fries (Large)",
       price: 800.0,
       discount: 0,
-      image: "./items/fries/fries-2.jpg"
+      image: "./asset/img/items/fries/fries-2.jpg"
     },
     {
       itemCode: "B1028",
@@ -574,7 +574,7 @@ const items = [
       itemName: "French Fries (Medium)",
       price: 650.0,
       discount: 0,
-      image: "./items/fries/fries-2.jpg"
+      image: "./asset/img/items/fries/fries-2.jpg"
     },
     {
       itemCode: "B1029",
@@ -582,7 +582,7 @@ const items = [
       itemName: "French Fries (Small)",
       price: 450.0,
       discount: 0,
-      image: "./items/fries/fries-3.jpg"
+      image: "./asset/img/items/fries/fries-3.jpg"
     },
     {
       itemCode: "B1030",
@@ -590,7 +590,7 @@ const items = [
       itemName: "Sweet Potato Fries (Large)",
       price: 600.0,
       discount: 0,
-      image: "./items/fries/fries-3.jpg"
+      image: "./asset/img/items/fries/fries-3.jpg"
     },
   
     // Pasta
@@ -600,7 +600,7 @@ const items = [
       itemName: "Chicken n Cheese Pasta",
       price: 1600.0,
       discount: 15,
-      image: "./items/pasta/pasta-1.jpg"
+      image: "./asset/img/items/pasta/pasta-1.jpg"
     },
     {
       itemCode: "B1032",
@@ -608,7 +608,7 @@ const items = [
       itemName: "Chicken Penne Pasta",
       price: 1700.0,
       discount: 0,
-      image: "./items/pasta/pasta-2.jpg"
+      image: "./asset/img/items/pasta/pasta-2.jpg"
     },
     {
       itemCode: "B1033",
@@ -616,7 +616,7 @@ const items = [
       itemName: "Ground Turkey Pasta Bake",
       price: 2900.0,
       discount: 10,
-      image: "./items/pasta/pasta-3.jpg"
+      image: "./asset/img/items/pasta/pasta-3.jpg"
     },
     {
       itemCode: "B1034",
@@ -624,7 +624,7 @@ const items = [
       itemName: "Creamy Shrimp Pasta",
       price: 2000.0,
       discount: 0,
-      image: "./items/pasta/pasta-4.jpg"
+      image: "./asset/img/items/pasta/pasta-4.jpg"
     },
     {
       itemCode: "B1035",
@@ -632,7 +632,7 @@ const items = [
       itemName: "Lemon Butter Pasta",
       price: 1950.0,
       discount: 0,
-      image: "./items/pasta/pasta-5.jpg"
+      image: "./asset/img/items/pasta/pasta-5.jpg"
     },
     {
       itemCode: "B1036",
@@ -640,7 +640,7 @@ const items = [
       itemName: "Tagliatelle Pasta",
       price: 2400.0,
       discount: 1,
-      image: "./items/pasta/pasta-6.jpg"
+      image: "./asset/img/items/pasta/pasta-6.jpg"
     },
     {
       itemCode: "B1037",
@@ -648,7 +648,7 @@ const items = [
       itemName: "Baked Ravioli",
       price: 2000.0,
       discount: 1,
-      image: "./items/pasta/pasta-7.jpg"
+      image: "./asset/img/items/pasta/pasta-7.jpg"
     },
   
     // Chicken
@@ -658,7 +658,7 @@ const items = [
       itemName: "Fried Chicken (Small)",
       price: 1200.0,
       discount: 0,
-      image: "./items/chicken/chicken-1.jpg"
+      image: "./asset/img/items/chicken/chicken-1.jpg"
     },
     {
       itemCode: "B1039",
@@ -666,7 +666,7 @@ const items = [
       itemName: "Fried Chicken (Regular)",
       price: 2300.0,
       discount: 10,
-      image: "./items/chicken/chicken-2.jpg"
+      image: "./asset/img/items/chicken/chicken-2.jpg"
     },
     {
       itemCode: "B1040",
@@ -674,7 +674,7 @@ const items = [
       itemName: "Fried Chicken (Large)",
       price: 3100.0,
       discount: 5,
-      image: "./items/chicken/chicken-3.jpg"
+      image: "./asset/img/items/chicken/chicken-3.jpg"
     },
     {
       itemCode: "B1041",
@@ -682,7 +682,7 @@ const items = [
       itemName: "Hot Wings (Large)",
       price: 2400.0,
       discount: 0,
-      image: "./items/chicken/chicken-4.jpg"
+      image: "./asset/img/items/chicken/chicken-4.jpg"
     },
     {
       itemCode: "B1042",
@@ -690,7 +690,7 @@ const items = [
       itemName: "Devilled Chicken (Large)",
       price: 900.0,
       discount: 0,
-      image: "./items/chicken/chicken-5.jpg"
+      image: "./asset/img/items/chicken/chicken-5.jpg"
     },
     {
       itemCode: "B1043",
@@ -698,7 +698,7 @@ const items = [
       itemName: "BBQ Chicken (Regular)",
       price: 2100.0,
       discount: 0,
-      image: "./items/chicken/chicken-6.jpg"
+      image: "./asset/img/items/chicken/chicken-6.jpg"
     },
   
     // Beverages
@@ -709,7 +709,7 @@ const items = [
       price: 990.0,
       discount: 5,
       expiryDate: "2024-12-31",
-      image: "./items/beverages/beverage-1.jpg"
+      image: "./asset/img/items/beverages/beverage-1.jpg"
     },
     {
       itemCode: "B1045",
@@ -717,7 +717,7 @@ const items = [
       itemName: "Coca-Cola (330ml)",
       price: 1230.0,
       discount: 0,
-      image: "./items/beverages/beverage-2.jpg",
+      image: "./asset/img/items/beverages/beverage-2.jpg",
       expiryDate: "2024-12-31"
     },
     {
@@ -727,7 +727,7 @@ const items = [
       price: 1500.0,
       discount: 3,
       expiryDate: "2024-07-05",
-      image: "./items/beverages/beverage-3.jpg"
+      image: "./asset/img/items/beverages/beverage-3.jpg"
     },
     {
       itemCode: "B1047",
@@ -736,7 +736,7 @@ const items = [
       price: 850.0,
       discount: 7,
       expiryDate: "2024-12-31",
-      image: "./items/beverages/beverage-4.jpg"
+      image: "./asset/img/items/beverages/beverage-4.jpg"
     },
   ];
 
@@ -1326,7 +1326,7 @@ document.getElementById('generate-pdf-btn').addEventListener('click', () => {
   const logoHeight = 20; 
 
   
-  const logoUrl = './img/logo.png'; 
+  const logoUrl = './asset/img/logo.png'; 
   doc.addImage(logoUrl, 'PNG', margin, margin, logoWidth, logoHeight);
 
   
