@@ -6,14 +6,45 @@ body {
 }
 
 .sidebar {
+    position: fixed;
     width: 200px;
     background-color: #333;
     color: #fff;
     padding: 15px;
     height: 100vh;
-    position: fixed;
     overflow-y: auto;
 }
+
+@media (min-width: 1200px) {
+   
+    .sidebar {
+        position: fixed;
+        width: 200px;
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+   
+    .sidebar {
+        position: fixed;
+        width: 200px;
+        background-color: #333;
+        color: #fff;
+        padding: 15px;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+
+
+
 
 .sidebar .logo{   
         width: 100%; 
@@ -45,6 +76,41 @@ body {
 }
 
 
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; 
+    }
+
+    .sidebar.open {
+        display: block;
+        width: 200px;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
+
 #btn-logout {
     
     bottom: 100px;
@@ -67,11 +133,7 @@ body {
 
 
 
-.main-content {
-    margin-left: 240px;
-    padding: 20px;
-    width: calc(100% - 240px);
-}
+
 
 .main-content h1 {
     text-align: center;
@@ -324,17 +386,19 @@ body {
     }
     
     .cart {
-        display: none; /* Hide the cart on small screens */
+        display: none;
     }
 
     #cart-toggle {
-        display: block; /* Show the toggle button */
+        display: block;
     }
 }
 
 @media (min-width: 1200px) {
-    /* Styles for large desktop screens */
+   
     .main-content {
+        margin-left: 240px;
+        width: calc(100% - 240px);
         margin-right: 290px; 
         padding: 20px; 
         box-sizing: border-box;
@@ -344,8 +408,10 @@ body {
 
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-    /* Styles for smaller desktops and laptops */
+   
     .main-content {
+        margin-left: 240px;
+        width: calc(100% - 240px);
         margin-right: 290px; 
         padding: 20px; 
         box-sizing: border-box;
@@ -354,7 +420,7 @@ body {
 }
 
 
-/* Home section styling */
+
 #home-item-container {
     display: flex;
     flex-wrap: wrap;
@@ -366,21 +432,21 @@ body {
 .item {
     border: 1px solid #ccc;
     padding: 10px;
-    width: calc(33.33% - 20px); /* Default: 3 items per row */
+    width: calc(33.33% - 20px);
     box-sizing: border-box;
     background: #fff; 
 }
 
-/* Adjust item width for smaller screens */
+
 @media (max-width: 1024px) {
     .item {
-        width: calc(50% - 20px); /* 2 items per row for tablets and smaller desktops */
+        width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 768px) {
     .item {
-        width: calc(100% - 20px); /* 1 item per row for mobile devices */
+        width: calc(100% - 20px);
     }
 }
 
@@ -392,7 +458,7 @@ body {
 
 
 
-/* General Cart Styling */
+
 .cart {
     position: fixed;
     right: 0;
@@ -407,10 +473,10 @@ body {
     flex-direction: column;
     overflow: hidden;
     z-index: 1000;
-    transition: transform 0.3s ease; /* Smooth transition for show/hide */
+    transition: transform 0.3s ease;
 }
 
-/* Cart Sidebar */
+
 #cart-sidebar {
     display: flex;
     flex-direction: column;
@@ -418,7 +484,7 @@ body {
     overflow: auto;
 }
 
-/* Cart Items */
+
 #cart-items {
     list-style-type: none;
     padding: 0;
@@ -428,7 +494,7 @@ body {
     background-color: rgb(245, 240, 240);
 }
 
-/* Cart Summary */
+
 #cart-summary {
     border-top: 1px solid #eee;
     padding-top: 10px;
@@ -438,7 +504,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Cart Button */
+
 #cart-sidebar button {
     margin-top: 10px;
     padding: 10px;
@@ -455,13 +521,13 @@ body {
     background-color: #0056b3;
 }
 
-/* Toggle button styles */
+
 #cart-toggle {
-    display: none; /* Hide the toggle button by default */
+    display: none; 
     position: fixed;
-    top: 0; /* Position at the top left corner */
-    right: 0;
-    background-color: #007bff;
+    top: 15px; 
+    right: 15px; 
+    background-color: #12375e;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -474,14 +540,19 @@ body {
     z-index: 1001;
 }
 
-/* Responsive Adjustments */
+#cart-toggle i{
+    vertical-align: middle;
+    margin: 0; 
+}
+
+
 @media (max-width: 1120px) {
     .cart {
-        display: none; /* Hide the cart on small screens */
+        display: none;
     }
 
     #cart-toggle {
-        display: block; /* Show the toggle button */
+        display: block;
     }
 }
 
@@ -528,7 +599,7 @@ body {
     background-color: #f2f2f2;
 }
 
-/* Total price section styling */
+
 .total-summary {
     margin-top: 20px;
     padding: 10px;
@@ -618,7 +689,7 @@ body {
     background-color: #0056b3;
 }
 
-/* Table Styles */
+
 table {
     width: 100%;
     border-collapse: collapse;

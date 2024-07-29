@@ -135,6 +135,23 @@ function showModalContent(modalId) {
     document.querySelector('.customer-buttons').style.display = 'none';
 }
 
+
+
+
+function toggleSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('open');
+}
+
+  
+
+
+
+
+
+
+
+
 function showStaffButtons() {
     const staffModalContent = document.getElementById('staffModalContent');
     if (staffModalContent) {
@@ -978,7 +995,7 @@ const items = [
                 const item = items.find(i => i.itemCode === cartItem.id);
                 return {
                     name: item.itemName,
-                    price: item.price,
+                    price: item.price, 
                     quantity: cartItem.quantity
                 };
             }),
