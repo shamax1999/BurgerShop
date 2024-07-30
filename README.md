@@ -1,4 +1,4 @@
-MOS Burgers Digital System
+MOS Burgers - POS System
 
 Welcome to the MOS Burgers POS System repository! This project is a web application designed to modernize and streamline the operations of the "MOS Burgers" shop.
 
