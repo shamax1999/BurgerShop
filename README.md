@@ -3,13 +3,19 @@ MOS Burgers - POS System
 Welcome to the MOS Burgers POS System repository! This project is a web application designed to modernize and streamline the operations of the "MOS Burgers" shop.
 
 Login Details:
+
 Admin:
-Username: admin
-Password: admin123
+
+    Username: admin
+
+    Password: admin123
 
 Staff:
-Username: staff
-Password: staff123
+
+    Username: staff
+
+    Password: staff123
+
 
 Project Overview:
 
